@@ -38,21 +38,22 @@ const (
 
 // Settings is the setting structure to configure GraphQL Playground.
 type Settings struct {
-	CursorShape           CursorShape `json:"editor.cursorShape,omitempty"`
-	FontFamily            string      `json:"editor.fontFamily,omitempty"`
-	FontSize              float32     `json:"editor.fontSize,omitempty"`
-	ReuseHeaders          bool        `json:"editor.reuseHeaders"`
-	Theme                 Theme       `json:"editor.theme,omitempty"`
-	BetaUpdates           bool        `json:"general.betaUpdates"`
-	PrintWidth            float32     `json:"prettier.printWidth,omitempty"`
-	TabWidth              float32     `json:"prettier.tabWidth,omitempty"`
-	UseTabs               bool        `json:"prettier.useTabs"`
-	Credentials           Credentials `json:"request.credentials,omitmepty"`
-	PollingEnabled        bool        `json:"schema.polling.enable"`
-	PollingEndpointFilter string      `json:"schema.polling.endpointFilter,omitempty"`
-	PollingInterval       float32     `json:"schema.polling.interval,omitempty"`
-	DisableSchemaComments bool        `json:"schema.disableComments"`
-	HideTraceResponse     bool        `json:"tracing.hideTracingResponse"`
+	CursorShape           CursorShape       `json:"editor.cursorShape,omitempty"`
+	FontFamily            string            `json:"editor.fontFamily,omitempty"`
+	FontSize              float32           `json:"editor.fontSize,omitempty"`
+	ReuseHeaders          bool              `json:"editor.reuseHeaders"`
+	Theme                 Theme             `json:"editor.theme,omitempty"`
+	BetaUpdates           bool              `json:"general.betaUpdates"`
+	PrintWidth            float32           `json:"prettier.printWidth,omitempty"`
+	TabWidth              float32           `json:"prettier.tabWidth,omitempty"`
+	UseTabs               bool              `json:"prettier.useTabs"`
+	Credentials           Credentials       `json:"request.credentials,omitempty"`
+	GlobalHeaders         map[string]string `json:"request.globalHeaders,omitempty"`
+	PollingEnabled        bool              `json:"schema.polling.enable"`
+	PollingEndpointFilter string            `json:"schema.polling.endpointFilter,omitempty"`
+	PollingInterval       float32           `json:"schema.polling.interval,omitempty"`
+	DisableSchemaComments bool              `json:"schema.disableComments"`
+	HideTraceResponse     bool              `json:"tracing.hideTracingResponse"`
 }
 
 // Option represents the configuration of playground that depends on:
